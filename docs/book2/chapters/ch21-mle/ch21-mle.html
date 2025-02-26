@@ -561,11 +561,11 @@ T'(\omega_j; \alpha) = \frac{1}{2\pi} \left( 2 \sin \frac{\omega_j}{2} \right)^{
 <p><span class="math display">\[
 V(x) = kx - \frac{1}{2} x^2 + \frac{1}{4} x^4, \tag{3}
 \]</span></p>
-<p>where <span class="math inline">\(V(x)\)</span> is the potential function that constrains the different motivational states <span class="math inline">\(x\)</span>; <span class="math inline">\(k\)</span> is the control parameter that specifies the direction and degree of tilt of the graph of <span class="math inline">\(V(x)\)</span> towards approach (when <span class="math inline">\(k\)</span> tends towards +1) and avoidance (when <span class="math inline">\(k\)</span> tends towards –1) motivations (see Figure 1).</p>
-<div class="quarto-figure quarto-figure-center">
+<p>where <span class="math inline">\(V(x)\)</span> is the potential function that constrains the different motivational states <span class="math inline">\(x\)</span>; <span class="math inline">\(k\)</span> is the control parameter that specifies the direction and degree of tilt of the graph of <span class="math inline">\(V(x)\)</span> towards approach (when <span class="math inline">\(k\)</span> tends towards +1) and avoidance (when <span class="math inline">\(k\)</span> tends towards –1) motivations (see <a href="#fig-approach">Figure&nbsp;<span>21.1</span></a>).</p>
+<div id="fig-approach" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/attractor_landscapes.png" class="img-fluid figure-img" width="600"></p>
-<p></p><figcaption class="figure-caption">Approach (Appr.) and avoidance (Avoid.) attractor landscapes as defined by Equation 3 with different values of the control parameter <span class="math inline">\(k\)</span> (from +1 to –1).</figcaption><p></p>
+<p></p><figcaption class="figure-caption"><strong>Figure</strong>&nbsp;1<strong>.</strong> Approach (Appr.) and avoidance (Avoid.) attractor landscapes as defined by Equation 3 with different values of the control parameter <span class="math inline">\(k\)</span> (from +1 to –1).</figcaption><p></p>
 </figure>
 </div>
 <p>The value of the parameter <span class="math inline">\(k\)</span> is itself conceived as resulting from the combination of three social cognitive variables considered to be necessary and sufficient for achievement motivation: Competence expectancies with regard to a goal (e.g., <span class="citation" data-cites="bandura_1997">[<a href="#ref-bandura_1997" role="doc-biblioref">18</a>]</span>), as well as the benefit to the self that the prospect of achieving a goal conveys and the threat to the self associated with the prospect of failure (e.g., <span class="citation" data-cites="crocker_2001">[<a href="#ref-crocker_2001" role="doc-biblioref">19</a>]</span>). These three variables contribute to determining <span class="math inline">\(k\)</span> according to Equation 4:</p>
@@ -598,33 +598,33 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
 </section>
 <section id="data-visualization" class="level4" data-number="3.2.2">
 <h4 data-number="3.2.2" class="anchored" data-anchor-id="data-visualization"><span class="header-section-number">3.2.2</span> Data visualization</h4>
-<p>First, we load the data with <code>import()</code> function from <code>rio</code> and visualize an extract of them (<a href="#fig-motivation-data">Figure&nbsp;<span>21.1</span></a>) with the function <code>gt_preview()</code>.</p>
+<p>First, we load the data with <code>import()</code> function from <code>rio</code> and visualize an extract of them (<a href="#tbl-motivation-data">Table&nbsp;<span>21.1</span></a>) with the function <code>gt_preview()</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>MotivationData <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="fu">paste0</span>(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://github.com/lamethods/data2/raw/main/"</span>,</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"motivation/Motivation.xlsx"</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>))</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">gt_preview</span>(MotivationData, <span class="at">top_n =</span> <span class="dv">8</span>, <span class="at">bottom_n =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="fig-motivation-data" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
+<div class="cell-output-display">
+<div id="tbl-motivation-data" class="anchored">
 
-<div id="gzzcnrolks" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gzzcnrolks table {
+<div id="lsgeiqdhia" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lsgeiqdhia table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gzzcnrolks thead, #gzzcnrolks tbody, #gzzcnrolks tfoot, #gzzcnrolks tr, #gzzcnrolks td, #gzzcnrolks th {
+#lsgeiqdhia thead, #lsgeiqdhia tbody, #lsgeiqdhia tfoot, #lsgeiqdhia tr, #lsgeiqdhia td, #lsgeiqdhia th {
   border-style: none;
 }
 
-#gzzcnrolks p {
+#lsgeiqdhia p {
   margin: 0;
   padding: 0;
 }
 
-#gzzcnrolks .gt_table {
+#lsgeiqdhia .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -650,12 +650,12 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-left-color: #D3D3D3;
 }
 
-#gzzcnrolks .gt_caption {
+#lsgeiqdhia .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gzzcnrolks .gt_title {
+#lsgeiqdhia .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -667,7 +667,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-bottom-width: 0;
 }
 
-#gzzcnrolks .gt_subtitle {
+#lsgeiqdhia .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -679,7 +679,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-top-width: 0;
 }
 
-#gzzcnrolks .gt_heading {
+#lsgeiqdhia .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -691,13 +691,13 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-right-color: #D3D3D3;
 }
 
-#gzzcnrolks .gt_bottom_border {
+#lsgeiqdhia .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gzzcnrolks .gt_col_headings {
+#lsgeiqdhia .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -712,7 +712,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-right-color: #D3D3D3;
 }
 
-#gzzcnrolks .gt_col_heading {
+#lsgeiqdhia .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -732,7 +732,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   overflow-x: hidden;
 }
 
-#gzzcnrolks .gt_column_spanner_outer {
+#lsgeiqdhia .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -744,15 +744,15 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   padding-right: 4px;
 }
 
-#gzzcnrolks .gt_column_spanner_outer:first-child {
+#lsgeiqdhia .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gzzcnrolks .gt_column_spanner_outer:last-child {
+#lsgeiqdhia .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gzzcnrolks .gt_column_spanner {
+#lsgeiqdhia .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -764,11 +764,11 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   width: 100%;
 }
 
-#gzzcnrolks .gt_spanner_row {
+#lsgeiqdhia .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gzzcnrolks .gt_group_heading {
+#lsgeiqdhia .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -794,7 +794,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   text-align: left;
 }
 
-#gzzcnrolks .gt_empty_group_heading {
+#lsgeiqdhia .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -809,15 +809,15 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   vertical-align: middle;
 }
 
-#gzzcnrolks .gt_from_md > :first-child {
+#lsgeiqdhia .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gzzcnrolks .gt_from_md > :last-child {
+#lsgeiqdhia .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gzzcnrolks .gt_row {
+#lsgeiqdhia .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -836,7 +836,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   overflow-x: hidden;
 }
 
-#gzzcnrolks .gt_stub {
+#lsgeiqdhia .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -849,7 +849,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   padding-right: 5px;
 }
 
-#gzzcnrolks .gt_stub_row_group {
+#lsgeiqdhia .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -863,15 +863,15 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   vertical-align: top;
 }
 
-#gzzcnrolks .gt_row_group_first td {
+#lsgeiqdhia .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gzzcnrolks .gt_row_group_first th {
+#lsgeiqdhia .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gzzcnrolks .gt_summary_row {
+#lsgeiqdhia .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -881,16 +881,16 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   padding-right: 5px;
 }
 
-#gzzcnrolks .gt_first_summary_row {
+#lsgeiqdhia .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gzzcnrolks .gt_first_summary_row.thick {
+#lsgeiqdhia .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gzzcnrolks .gt_last_summary_row {
+#lsgeiqdhia .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -900,7 +900,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-bottom-color: #D3D3D3;
 }
 
-#gzzcnrolks .gt_grand_summary_row {
+#lsgeiqdhia .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -910,7 +910,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   padding-right: 5px;
 }
 
-#gzzcnrolks .gt_first_grand_summary_row {
+#lsgeiqdhia .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -920,7 +920,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-top-color: #D3D3D3;
 }
 
-#gzzcnrolks .gt_last_grand_summary_row_top {
+#lsgeiqdhia .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -930,11 +930,11 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-bottom-color: #D3D3D3;
 }
 
-#gzzcnrolks .gt_striped {
+#lsgeiqdhia .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gzzcnrolks .gt_table_body {
+#lsgeiqdhia .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -943,7 +943,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-bottom-color: #D3D3D3;
 }
 
-#gzzcnrolks .gt_footnotes {
+#lsgeiqdhia .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -957,7 +957,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-right-color: #D3D3D3;
 }
 
-#gzzcnrolks .gt_footnote {
+#lsgeiqdhia .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -966,7 +966,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   padding-right: 5px;
 }
 
-#gzzcnrolks .gt_sourcenotes {
+#lsgeiqdhia .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -980,7 +980,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-right-color: #D3D3D3;
 }
 
-#gzzcnrolks .gt_sourcenote {
+#lsgeiqdhia .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -988,76 +988,76 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   padding-right: 5px;
 }
 
-#gzzcnrolks .gt_left {
+#lsgeiqdhia .gt_left {
   text-align: left;
 }
 
-#gzzcnrolks .gt_center {
+#lsgeiqdhia .gt_center {
   text-align: center;
 }
 
-#gzzcnrolks .gt_right {
+#lsgeiqdhia .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gzzcnrolks .gt_font_normal {
+#lsgeiqdhia .gt_font_normal {
   font-weight: normal;
 }
 
-#gzzcnrolks .gt_font_bold {
+#lsgeiqdhia .gt_font_bold {
   font-weight: bold;
 }
 
-#gzzcnrolks .gt_font_italic {
+#lsgeiqdhia .gt_font_italic {
   font-style: italic;
 }
 
-#gzzcnrolks .gt_super {
+#lsgeiqdhia .gt_super {
   font-size: 65%;
 }
 
-#gzzcnrolks .gt_footnote_marks {
+#lsgeiqdhia .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gzzcnrolks .gt_asterisk {
+#lsgeiqdhia .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gzzcnrolks .gt_indent_1 {
+#lsgeiqdhia .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gzzcnrolks .gt_indent_2 {
+#lsgeiqdhia .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gzzcnrolks .gt_indent_3 {
+#lsgeiqdhia .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gzzcnrolks .gt_indent_4 {
+#lsgeiqdhia .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gzzcnrolks .gt_indent_5 {
+#lsgeiqdhia .gt_indent_5 {
   text-indent: 25px;
 }
 
-#gzzcnrolks .katex-display {
+#lsgeiqdhia .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#gzzcnrolks div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#lsgeiqdhia div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Table&nbsp;1.  Preview of motivation data </caption>
   <thead>
     <tr class="gt_col_headings">
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub"></th>
@@ -1123,36 +1123,35 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   
 </table>
 </div>
-<p></p><figcaption class="figure-caption"><strong>Figure</strong>&nbsp;1<strong>.</strong> Preview of motivation data</figcaption><p></p>
-</figure>
 </div>
 </div>
-<p>The dataset comprises four columns of length 111: the first column is the number of weeks (‘Week’), the second column is the values of competence expectancies for each week (‘Ce’), the third is the values of potential benefit to the self (‘Bs’) and the last column the values of potential threat to the self (‘Ts’). To calculate the <span class="math inline">\(k\)</span> values according to Equation 4, we use <code>mutate</code> from the <code>dplyr</code> package to create a fifth column and apply the equation for each week (<a href="#fig-motivation-data-col">Figure&nbsp;<span>21.2</span></a>).</p>
+</div>
+<p>The dataset comprises four columns of length 111: the first column is the number of weeks (‘Week’), the second column is the values of competence expectancies for each week (‘Ce’), the third is the values of potential benefit to the self (‘Bs’) and the last column the values of potential threat to the self (‘Ts’). To calculate the <span class="math inline">\(k\)</span> values according to Equation 4, we use <code>mutate</code> from the <code>dplyr</code> package to create a fifth column and apply the equation for each week (<a href="#tbl-motivation-data-col">Table&nbsp;<span>21.2</span></a>).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>MotivationData <span class="ot">&lt;-</span> MotivationData <span class="sc">%&gt;%</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">K =</span> (Ce <span class="sc">*</span> Bs) <span class="sc">-</span> (Ts <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> Ce))) </span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>k_values <span class="ot">&lt;-</span> (MotivationData<span class="sc">$</span>K) <span class="co"># store K values in a vector</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">gt_preview</span>(MotivationData, <span class="at">top_n =</span> <span class="dv">8</span>, <span class="at">bottom_n =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="fig-motivation-data-col" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
+<div class="cell-output-display">
+<div id="tbl-motivation-data-col" class="anchored">
 
-<div id="leirhyvkuy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#leirhyvkuy table {
+<div id="quamaphdeg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#quamaphdeg table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#leirhyvkuy thead, #leirhyvkuy tbody, #leirhyvkuy tfoot, #leirhyvkuy tr, #leirhyvkuy td, #leirhyvkuy th {
+#quamaphdeg thead, #quamaphdeg tbody, #quamaphdeg tfoot, #quamaphdeg tr, #quamaphdeg td, #quamaphdeg th {
   border-style: none;
 }
 
-#leirhyvkuy p {
+#quamaphdeg p {
   margin: 0;
   padding: 0;
 }
 
-#leirhyvkuy .gt_table {
+#quamaphdeg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1178,12 +1177,12 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-left-color: #D3D3D3;
 }
 
-#leirhyvkuy .gt_caption {
+#quamaphdeg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#leirhyvkuy .gt_title {
+#quamaphdeg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1195,7 +1194,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-bottom-width: 0;
 }
 
-#leirhyvkuy .gt_subtitle {
+#quamaphdeg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1207,7 +1206,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-top-width: 0;
 }
 
-#leirhyvkuy .gt_heading {
+#quamaphdeg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1219,13 +1218,13 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-right-color: #D3D3D3;
 }
 
-#leirhyvkuy .gt_bottom_border {
+#quamaphdeg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#leirhyvkuy .gt_col_headings {
+#quamaphdeg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1240,7 +1239,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-right-color: #D3D3D3;
 }
 
-#leirhyvkuy .gt_col_heading {
+#quamaphdeg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1260,7 +1259,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   overflow-x: hidden;
 }
 
-#leirhyvkuy .gt_column_spanner_outer {
+#quamaphdeg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1272,15 +1271,15 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   padding-right: 4px;
 }
 
-#leirhyvkuy .gt_column_spanner_outer:first-child {
+#quamaphdeg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#leirhyvkuy .gt_column_spanner_outer:last-child {
+#quamaphdeg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#leirhyvkuy .gt_column_spanner {
+#quamaphdeg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1292,11 +1291,11 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   width: 100%;
 }
 
-#leirhyvkuy .gt_spanner_row {
+#quamaphdeg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#leirhyvkuy .gt_group_heading {
+#quamaphdeg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1322,7 +1321,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   text-align: left;
 }
 
-#leirhyvkuy .gt_empty_group_heading {
+#quamaphdeg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1337,15 +1336,15 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   vertical-align: middle;
 }
 
-#leirhyvkuy .gt_from_md > :first-child {
+#quamaphdeg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#leirhyvkuy .gt_from_md > :last-child {
+#quamaphdeg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#leirhyvkuy .gt_row {
+#quamaphdeg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1364,7 +1363,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   overflow-x: hidden;
 }
 
-#leirhyvkuy .gt_stub {
+#quamaphdeg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1377,7 +1376,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   padding-right: 5px;
 }
 
-#leirhyvkuy .gt_stub_row_group {
+#quamaphdeg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1391,15 +1390,15 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   vertical-align: top;
 }
 
-#leirhyvkuy .gt_row_group_first td {
+#quamaphdeg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#leirhyvkuy .gt_row_group_first th {
+#quamaphdeg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#leirhyvkuy .gt_summary_row {
+#quamaphdeg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1409,16 +1408,16 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   padding-right: 5px;
 }
 
-#leirhyvkuy .gt_first_summary_row {
+#quamaphdeg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#leirhyvkuy .gt_first_summary_row.thick {
+#quamaphdeg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#leirhyvkuy .gt_last_summary_row {
+#quamaphdeg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1428,7 +1427,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-bottom-color: #D3D3D3;
 }
 
-#leirhyvkuy .gt_grand_summary_row {
+#quamaphdeg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1438,7 +1437,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   padding-right: 5px;
 }
 
-#leirhyvkuy .gt_first_grand_summary_row {
+#quamaphdeg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1448,7 +1447,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-top-color: #D3D3D3;
 }
 
-#leirhyvkuy .gt_last_grand_summary_row_top {
+#quamaphdeg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1458,11 +1457,11 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-bottom-color: #D3D3D3;
 }
 
-#leirhyvkuy .gt_striped {
+#quamaphdeg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#leirhyvkuy .gt_table_body {
+#quamaphdeg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1471,7 +1470,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-bottom-color: #D3D3D3;
 }
 
-#leirhyvkuy .gt_footnotes {
+#quamaphdeg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1485,7 +1484,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-right-color: #D3D3D3;
 }
 
-#leirhyvkuy .gt_footnote {
+#quamaphdeg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1494,7 +1493,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   padding-right: 5px;
 }
 
-#leirhyvkuy .gt_sourcenotes {
+#quamaphdeg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1508,7 +1507,7 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   border-right-color: #D3D3D3;
 }
 
-#leirhyvkuy .gt_sourcenote {
+#quamaphdeg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1516,76 +1515,76 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   padding-right: 5px;
 }
 
-#leirhyvkuy .gt_left {
+#quamaphdeg .gt_left {
   text-align: left;
 }
 
-#leirhyvkuy .gt_center {
+#quamaphdeg .gt_center {
   text-align: center;
 }
 
-#leirhyvkuy .gt_right {
+#quamaphdeg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#leirhyvkuy .gt_font_normal {
+#quamaphdeg .gt_font_normal {
   font-weight: normal;
 }
 
-#leirhyvkuy .gt_font_bold {
+#quamaphdeg .gt_font_bold {
   font-weight: bold;
 }
 
-#leirhyvkuy .gt_font_italic {
+#quamaphdeg .gt_font_italic {
   font-style: italic;
 }
 
-#leirhyvkuy .gt_super {
+#quamaphdeg .gt_super {
   font-size: 65%;
 }
 
-#leirhyvkuy .gt_footnote_marks {
+#quamaphdeg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#leirhyvkuy .gt_asterisk {
+#quamaphdeg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#leirhyvkuy .gt_indent_1 {
+#quamaphdeg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#leirhyvkuy .gt_indent_2 {
+#quamaphdeg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#leirhyvkuy .gt_indent_3 {
+#quamaphdeg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#leirhyvkuy .gt_indent_4 {
+#quamaphdeg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#leirhyvkuy .gt_indent_5 {
+#quamaphdeg .gt_indent_5 {
   text-indent: 25px;
 }
 
-#leirhyvkuy .katex-display {
+#quamaphdeg .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#leirhyvkuy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#quamaphdeg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Table&nbsp;2.  Preview of motivation data with additional column </caption>
   <thead>
     <tr class="gt_col_headings">
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="a::stub"></th>
@@ -1662,11 +1661,10 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
   
 </table>
 </div>
-<p></p><figcaption class="figure-caption"><strong>Figure</strong>&nbsp;2<strong>.</strong> Preview of motivation data with additional column</figcaption><p></p>
-</figure>
 </div>
 </div>
-<p>To visualize the temporal dynamics of <span class="math inline">\(k\)</span>, we use <code>ggplot2</code> to create a line plot (see Figure 2).</p>
+</div>
+<p>To visualize the temporal dynamics of <span class="math inline">\(k\)</span>, we use <code>ggplot2</code> to create a line plot (see <a href="#fig-lineplot">Figure&nbsp;<span>21.2</span></a>).</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(MotivationData, <span class="fu">aes</span>(<span class="at">x =</span> Week, <span class="at">y =</span> K)) <span class="sc">+</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">colour =</span> <span class="st">"turquoise4"</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
@@ -1678,15 +1676,15 @@ k = (Ce \times Bs) - [Ts \times (1 - Ce)], \tag{4}
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"gray95"</span>)</span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-lineplot" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="img/ch21-mle_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="960"></p>
-<p></p><figcaption class="figure-caption">Line plot of the evolution of the control parameter of approach and avoidance motivations <span class="math inline">\(k\)</span>.</figcaption><p></p>
+<p><img src="img/ch21-mle_files/figure-html/fig-lineplot-1.png" class="img-fluid figure-img" width="960"></p>
+<p></p><figcaption class="figure-caption"><strong>Figure</strong>&nbsp;2<strong>.</strong> Line plot of the evolution of the control parameter of approach and avoidance motivations <span class="math inline">\(k\)</span>.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>The plot in Figure 2 shows the variations in the student’s motivational state with respect to her goal of defending her Ph.D.&nbsp;thesis. This motivational state is reflected by the value of the parameter <span class="math inline">\(k\)</span> (vertical axis), which determines the inclination of the attractor landscape towards approach (when <span class="math inline">\(k\)</span> tends towards +1) or avoidance (when <span class="math inline">\(k\)</span> tends towards –1). The values of <span class="math inline">\(k\)</span> are characterized by varied non-linear changes over the weeks (horizontal axis). At certain periods, fluctuations in motivational state remain confined within the avoidance attractor (e.g., from week 12 to week 30). At other times, these fluctuations tend to stay within the approach attractor (e.g., from week 93 to week 102). But overall, motivation seems rather unstable, most often oscillating between the two attractors by crossing the value of <span class="math inline">\(k\)</span> = 0. At first glance, motivational variability may look erratic, with no consistent trend over time. Although visual analysis of the data is essential, it is Whittle’s MLE that enables the temporal structure of the variability of this signal to be detected statistically.</p>
+<p>The plot in <a href="#fig-lineplot">Figure&nbsp;<span>21.2</span></a> shows the variations in the student’s motivational state with respect to her goal of defending her Ph.D.&nbsp;thesis. This motivational state is reflected by the value of the parameter <span class="math inline">\(k\)</span> (vertical axis), which determines the inclination of the attractor landscape towards approach (when <span class="math inline">\(k\)</span> tends towards +1) or avoidance (when <span class="math inline">\(k\)</span> tends towards –1). The values of <span class="math inline">\(k\)</span> are characterized by varied non-linear changes over the weeks (horizontal axis). At certain periods, fluctuations in motivational state remain confined within the avoidance attractor (e.g., from week 12 to week 30). At other times, these fluctuations tend to stay within the approach attractor (e.g., from week 93 to week 102). But overall, motivation seems rather unstable, most often oscillating between the two attractors by crossing the value of <span class="math inline">\(k\)</span> = 0. At first glance, motivational variability may look erratic, with no consistent trend over time. Although visual analysis of the data is essential, it is Whittle’s MLE that enables the temporal structure of the variability of this signal to be detected statistically.</p>
 </section>
 <section id="application-of-whittles-mle-algorithm" class="level4" data-number="3.2.3">
 <h4 data-number="3.2.3" class="anchored" data-anchor-id="application-of-whittles-mle-algorithm"><span class="header-section-number">3.2.3</span> Application of Whittle’s MLE algorithm</h4>

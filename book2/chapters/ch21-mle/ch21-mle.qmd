@@ -73,9 +73,9 @@ $$
 V(x) = kx - \frac{1}{2} x^2 + \frac{1}{4} x^4, \tag{3}
 $$
 
-where $V(x)$ is the potential function that constrains the different motivational states $x$; $k$ is the control parameter that specifies the direction and degree of tilt of the graph of $V(x)$ towards approach (when $k$ tends towards +1) and avoidance (when $k$ tends towards –1) motivations (see Figure 1).
+where $V(x)$ is the potential function that constrains the different motivational states $x$; $k$ is the control parameter that specifies the direction and degree of tilt of the graph of $V(x)$ towards approach (when $k$ tends towards +1) and avoidance (when $k$ tends towards –1) motivations (see @fig-approach).
 
-![Approach (Appr.) and avoidance (Avoid.) attractor landscapes as defined by Equation 3 with different values of the control parameter $k$ (from +1 to –1).](attractor_landscapes.png){width="600"}
+![Approach (Appr.) and avoidance (Avoid.) attractor landscapes as defined by Equation 3 with different values of the control parameter $k$ (from +1 to –1).](attractor_landscapes.png){#fig-approach width="600"}
 
 The value of the parameter $k$ is itself conceived as resulting from the combination of three social cognitive variables considered to be necessary and sufficient for achievement motivation: Competence expectancies with regard to a goal (e.g., [@bandura_1997]), as well as the benefit to the self that the prospect of achieving a goal conveys and the threat to the self associated with the prospect of failure (e.g., [@crocker_2001]). These three variables contribute to determining $k$ according to Equation 4:
 
@@ -121,11 +121,11 @@ library(ggplot2)
 
 #### Data visualization
 
-First, we load the data with `import()` function from `rio` and visualize an extract of them (@fig-motivation-data) with the function `gt_preview()`.
+First, we load the data with `import()` function from `rio` and visualize an extract of them (@tbl-motivation-data) with the function `gt_preview()`.
 
 ```{r,message = FALSE, error = FALSE, warning = FALSE}
-#| label: fig-motivation-data
-#| fig-cap: "Preview of motivation data"
+#| label: tbl-motivation-data
+#| tbl-cap: "Preview of motivation data"
 #| out-width: 70%
 MotivationData <- import(paste0(
   "https://github.com/lamethods/data2/raw/main/",
@@ -134,20 +134,21 @@ MotivationData <- import(paste0(
 gt_preview(MotivationData, top_n = 8, bottom_n = 1)
 ```
 
-The dataset comprises four columns of length 111: the first column is the number of weeks ('Week'), the second column is the values of competence expectancies for each week ('Ce'), the third is the values of potential benefit to the self ('Bs') and the last column the values of potential threat to the self ('Ts'). To calculate the $k$ values according to Equation 4, we use `mutate` from the `dplyr` package to create a fifth column and apply the equation for each week (@fig-motivation-data-col).
+The dataset comprises four columns of length 111: the first column is the number of weeks ('Week'), the second column is the values of competence expectancies for each week ('Ce'), the third is the values of potential benefit to the self ('Bs') and the last column the values of potential threat to the self ('Ts'). To calculate the $k$ values according to Equation 4, we use `mutate` from the `dplyr` package to create a fifth column and apply the equation for each week (@tbl-motivation-data-col).
 
 ```{r, message = FALSE, error = FALSE, warning = FALSE}
-#| label: fig-motivation-data-col
-#| fig-cap: "Preview of motivation data with additional column"
+#| label: tbl-motivation-data-col
+#| tbl-cap: "Preview of motivation data with additional column"
 MotivationData <- MotivationData %>%
   mutate(K = (Ce * Bs) - (Ts * (1 - Ce))) 
 k_values <- (MotivationData$K) # store K values in a vector
 gt_preview(MotivationData, top_n = 8, bottom_n = 1)
 ```
 
-To visualize the temporal dynamics of $k$, we use `ggplot2` to create a line plot (see Figure 2).
+To visualize the temporal dynamics of $k$, we use `ggplot2` to create a line plot (see @fig-lineplot).
 
 ```{r, fig.align='center', fig.cap = "Line plot of the evolution of the control parameter of approach and avoidance motivations $k$.", fig.width = 10, fig.height = 5}
+#| label: fig-lineplot
 ggplot(MotivationData, aes(x = Week, y = K)) +
   geom_line(colour = "turquoise4", linewidth = 0.8) +
   geom_point(colour = "magenta", size = 1) +
@@ -159,7 +160,7 @@ ggplot(MotivationData, aes(x = Week, y = K)) +
   )
 ```
 
-The plot in Figure 2 shows the variations in the student's motivational state with respect to her goal of defending her Ph.D. thesis. This motivational state is reflected by the value of the parameter $k$ (vertical axis), which determines the inclination of the attractor landscape towards approach (when $k$ tends towards +1) or avoidance (when $k$ tends towards –1). The values of $k$ are characterized by varied non-linear changes over the weeks (horizontal axis). At certain periods, fluctuations in motivational state remain confined within the avoidance attractor (e.g., from week 12 to week 30). At other times, these fluctuations tend to stay within the approach attractor (e.g., from week 93 to week 102). But overall, motivation seems rather unstable, most often oscillating between the two attractors by crossing the value of $k$ = 0. At first glance, motivational variability may look erratic, with no consistent trend over time. Although visual analysis of the data is essential, it is Whittle's MLE that enables the temporal structure of the variability of this signal to be detected statistically.
+The plot in @fig-lineplot shows the variations in the student's motivational state with respect to her goal of defending her Ph.D. thesis. This motivational state is reflected by the value of the parameter $k$ (vertical axis), which determines the inclination of the attractor landscape towards approach (when $k$ tends towards +1) or avoidance (when $k$ tends towards –1). The values of $k$ are characterized by varied non-linear changes over the weeks (horizontal axis). At certain periods, fluctuations in motivational state remain confined within the avoidance attractor (e.g., from week 12 to week 30). At other times, these fluctuations tend to stay within the approach attractor (e.g., from week 93 to week 102). But overall, motivation seems rather unstable, most often oscillating between the two attractors by crossing the value of $k$ = 0. At first glance, motivational variability may look erratic, with no consistent trend over time. Although visual analysis of the data is essential, it is Whittle's MLE that enables the temporal structure of the variability of this signal to be detected statistically.
 
 #### Application of Whittle’s MLE algorithm
 
