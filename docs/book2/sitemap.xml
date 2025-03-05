@@ -2,98 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lamethods.github.io/index.html</loc>
-    <lastmod>2025-02-26T20:22:04.017Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.059Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/contributors.html</loc>
-    <lastmod>2025-02-26T20:22:04.017Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.059Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch01-intro/ch01-intro.html</loc>
-    <lastmod>2025-02-26T20:22:04.021Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.063Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch02-AIxAI/ch02-aixai.html</loc>
-    <lastmod>2025-02-26T20:22:04.025Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.067Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch03-prediction/ch03-prediction.html</loc>
-    <lastmod>2025-02-26T20:22:04.037Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.075Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch04-classification/ch04-classification.html</loc>
-    <lastmod>2025-02-26T20:22:04.049Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.083Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch05-regularization/ch05-regularization.html</loc>
-    <lastmod>2025-02-26T20:22:04.053Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.091Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch06-xai-global/ch06-xai-global.html</loc>
-    <lastmod>2025-02-26T20:22:04.061Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.099Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch07-xai-local/ch07-xai-local.html</loc>
-    <lastmod>2025-02-26T20:22:04.065Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.107Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch08-llms/ch08-llms.html</loc>
-    <lastmod>2025-02-26T20:22:04.069Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.107Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch09-nlp/ch09-nlp.html</loc>
-    <lastmod>2025-02-26T20:22:04.069Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.107Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch10-bert/ch10-bert.html</loc>
-    <lastmod>2025-02-26T20:22:04.073Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.115Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch11-llmsxai/ch11-llmsxai.html</loc>
-    <lastmod>2025-02-26T20:22:04.081Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.119Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch12-cds/ch12-cds.html</loc>
-    <lastmod>2025-02-26T20:22:04.085Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.123Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch13-ega/ch13-ega.html</loc>
-    <lastmod>2025-02-26T20:22:04.085Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.123Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch14-rqa/ch14-rqa.html</loc>
-    <lastmod>2025-02-26T20:22:04.085Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.127Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch15-tna/ch15-tna.html</loc>
-    <lastmod>2025-02-26T20:22:04.093Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.131Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch16-ftna/ch16-ftna.html</loc>
-    <lastmod>2025-02-26T20:22:04.097Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.139Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch17-tna-clusters/ch17-tna-clusters.html</loc>
-    <lastmod>2025-02-26T20:22:04.101Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.143Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch18-idio/ch18-idio.html</loc>
-    <lastmod>2025-02-26T20:22:04.105Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.143Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch19-three-levels/ch19-three-levels.html</loc>
-    <lastmod>2025-02-26T20:22:04.109Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.151Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch20-var/ch20-var.html</loc>
-    <lastmod>2025-02-26T20:22:04.113Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.155Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch21-mle/ch21-mle.html</loc>
-    <lastmod>2025-02-26T20:22:04.121Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.159Z</lastmod>
   </url>
   <url>
     <loc>https://lamethods.github.io/chapters/ch22-automl/ch22-automl.html</loc>
-    <lastmod>2025-02-26T20:22:04.125Z</lastmod>
+    <lastmod>2025-03-05T16:33:23.167Z</lastmod>
   </url>
 </urlset>
