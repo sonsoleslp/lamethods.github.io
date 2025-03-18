@@ -836,14 +836,14 @@ Initial Probabilities
 <p>In TNA, small edges can be removed using the <code>prune()</code> function which removes edges using a user-specified method via the <code>method</code> argument. With the <code>"threshold"</code> method, edges are removed below a certain <code>threshold</code> value (the default is 0.05 which removes edges below 0.05). The <code>"lowest"</code> method deletes the lowest percentile of edges for instance, <code>lowest = 0.1</code> removes all edges in the lower 10th percentile in terms of edge weights. When using these methods, the <code>prune()</code> function makes sure that it does not disconnect the network, if it finds that the removal of one edge disconnects the network, it retains it to keep the network connected.</p>
 <p>Another theoretically sound method is to remove edges using a network null model. While several null models exists for non-weighted networks, only a few can be reliable in weighted networks like transition networks. TNA implements the <em>Disparity Filter</em> which is a robust network sparsification algorithm that helps extracts the backbone structure of weighted networks <span class="citation" data-cites="neal2022">[<a href="#ref-neal2022" role="doc-biblioref">44</a>]</span>. The disparity filter simplifies the network by discarding weak edge that are lower than a pre-defined alpha level. The values of alpha ranges from 0.05 (roughly statistically significant compared to a random model), to 0.5 (more likely to than chance). Values of 0.05 are very restrictive and removes most edges in the network, therefore, for the case of pruning TNA models, it is advisable to use the default 0.5 levels which simply means that these edges are more likely to have resulted from a learning process rather than by chance. Values of 0.05 maybe used in larger networks or in cases of theory building and could possibly be interpreted that these structure are likely to be repeated or reproducible in future scenarios. Applying the disparity filter to the TNA model is simple and can be applied using the <code>"disparity"</code> method in <code>prune()</code> with the model as argument. The code in the next chunk does three all types of pruning in TNA (<a href="#fig-pruned">Figure&nbsp;<span>15.5</span></a>):</p>
 <ol type="1">
-<li><p><strong>Threshold</strong>: Directly removes edges with weights below 0.15, offering a straightforward cutoff approach.</p></li>
+<li><p><strong>Threshold</strong>: Directly removes edges with weights below 0.05, offering a straightforward cutoff approach.</p></li>
 <li><p><strong>Lowest Percentage</strong>: Removes the bottom 15% of edges when sorted by weight, focusing on relative edge importance.</p></li>
 <li><p><strong>Disparity Filter</strong>: Uses a different statistical approach (significance level <span class="math inline">\(\alpha\)</span> = 0.5) to identify significant edges based on the network’s topology.</p></li>
 </ol>
 <p>Pruning with <code>tna</code> can also be carried out by bootstrapping, which we will demonstrate later.</p>
 <div>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pruning with different methods (using comparable parameters)</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>pruned_threshold <span class="ot">&lt;-</span> <span class="fu">prune</span>(model, <span class="at">method =</span> <span class="st">"threshold"</span>, <span class="at">threshold =</span> <span class="fl">0.15</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>pruned_threshold <span class="ot">&lt;-</span> <span class="fu">prune</span>(model, <span class="at">method =</span> <span class="st">"threshold"</span>, <span class="at">threshold =</span> <span class="fl">0.05</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>pruned_lowest <span class="ot">&lt;-</span> <span class="fu">prune</span>(model, <span class="at">method =</span> <span class="st">"lowest"</span>, <span class="at">lowest =</span> <span class="fl">0.15</span>)</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>pruned_disparity <span class="ot">&lt;-</span> <span class="fu">prune</span>(model, <span class="at">method =</span> <span class="st">"disparity"</span>, <span class="at">level =</span> <span class="fl">0.5</span>)</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
@@ -859,7 +859,7 @@ Initial Probabilities
 <div id="fig-pruned-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/ch15-tna_files/figure-html/fig-pruned-1.png" class="img-fluid figure-img" data-ref-parent="fig-pruned"></p>
-<p></p><figcaption class="figure-caption">(a) Threshold = 0.15</figcaption><p></p>
+<p></p><figcaption class="figure-caption">(a) Threshold = 0.05</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -1373,9 +1373,9 @@ synthesis       0.044   0.071   0.012 0.075    0.0000</code></pre>
 
 Community assignments:
        node walktrap fast_greedy label_prop infomap edge_betweenness leading_eigen spinglass
-1     adapt        1           1          1       1                1             1         1
-2  cohesion        1           1          1       1                1             1         1
-3 consensus        1           1          1       1                1             2         1
+1     adapt        1           1          1       1                1             1         2
+2  cohesion        1           1          1       1                1             1         2
+3 consensus        1           1          1       1                1             2         2
  [ reached 'max' / getOption("max.print") -- omitted 6 rows ]</code></pre>
 </div>
 </div>

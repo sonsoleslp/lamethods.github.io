@@ -270,7 +270,7 @@ In TNA, small edges can be removed using the `prune()` function which removes ed
 
 Another theoretically sound method is to remove edges using a network null model. While several null models exists for non-weighted networks, only a few can be reliable in weighted networks like transition networks. TNA implements the *Disparity Filter* which is a robust network sparsification algorithm that helps extracts the backbone structure of weighted networks [@neal2022]. The disparity filter simplifies the network by discarding weak edge that are lower than a pre-defined alpha level. The values of alpha ranges from 0.05 (roughly statistically significant compared to a random model), to 0.5 (more likely to than chance). Values of 0.05 are very restrictive and removes most edges in the network, therefore, for the case of pruning TNA models, it is advisable to use the default 0.5 levels which simply means that these edges are more likely to have resulted from a learning process rather than by chance. Values of 0.05 maybe used in larger networks or in cases of theory building and could possibly be interpreted that these structure are likely to be repeated or reproducible in future scenarios. Applying the disparity filter to the TNA model is simple and can be applied using the `"disparity"` method in `prune()` with the model as argument. The code in the next chunk does three all types of pruning in TNA (@fig-pruned):
 
-1.  **Threshold**: Directly removes edges with weights below 0.15, offering a straightforward cutoff approach.
+1.  **Threshold**: Directly removes edges with weights below 0.05, offering a straightforward cutoff approach.
 
 2.  **Lowest Percentage**: Removes the bottom 15% of edges when sorted by weight, focusing on relative edge importance.
 
@@ -282,13 +282,13 @@ Pruning with `tna` can also be carried out by bootstrapping, which we will demon
 #| label: fig-pruned
 #| fig-cap: "Pruning with different methods"
 #| fig-subcap: 
-#|    - "Threshold = 0.15"
+#|    - "Threshold = 0.05"
 #|    - "Lowest 15%"
 #|    - "Disparity filter"
 #|    - "Minimum threshold"
 
 # Pruning with different methods (using comparable parameters)
-pruned_threshold <- prune(model, method = "threshold", threshold = 0.15)
+pruned_threshold <- prune(model, method = "threshold", threshold = 0.05)
 pruned_lowest <- prune(model, method = "lowest", lowest = 0.15)
 pruned_disparity <- prune(model, method = "disparity", level = 0.5)
 
